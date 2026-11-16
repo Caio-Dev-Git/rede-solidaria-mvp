@@ -14,6 +14,9 @@ Aplicação web comunitária desenvolvida na disciplina de **Projeto de Software
 - **Testes Automatizados:** Node.js Native Test Runner (`node:test`) + Supertest (Unitários e Integração)
 - **Integração Contínua (CI):** GitHub Actions
 
+## Revisão Técnica e Arquitetura
+- Organização modular em `src/`, `public/` e `tests/` com foco em manutenibilidade e clareza.
+
 ## Estrutura do Projeto
 ```text
 rede-solidaria-mvp/
@@ -23,3 +26,4 @@ rede-solidaria-mvp/
 ├── tests/                     # Testes automatizados unitários e de integração
 ├── package.json
 └── README.md
+

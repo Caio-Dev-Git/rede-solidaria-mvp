@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConectaBairro — Doações e Trocas Comunitárias</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topo">
+    <div class="container">
+      <h1>ConectaBairro</h1>
+      <p>Rede solidária de doações e trocas sustentáveis na comunidade (ODS 11 e 12)</p>
+    </div>
+  </header>
+
+  <main class="container grid">
+    <section aria-labelledby="titulo-cadastro" class="card">
+      <h2 id="titulo-cadastro">Cadastrar Item para Doação</h2>
+      <form id="form-item" novalidate>
+        <div class="campo">
+          <label for="titulo">O que você deseja doar? *</label>
+          <input type="text" id="titulo" name="titulo" required placeholder="Ex: Roupas infantis, Livros didáticos" />
+        </div>
+
+        <div class="campo">
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="">Selecione...</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Móveis">Móveis</option>
+            <option value="Livros">Livros</option>
+            <option value="Eletrônicos">Eletrônicos</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="bairro">Bairro *</label>
+          <input type="text" id="bairro" name="bairro" required placeholder="Ex: Jardim das Flores" />
+        </div>
+
+        <div class="campo">
+          <label for="contato">Telefone / WhatsApp *</label>
+          <input type="text" id="contato" name="contato" required placeholder="Ex: (11) 98888-7777" />
+        </div>
+
+        <button type="submit" class="btn-primario">Publicar Doação</button>
+        <p id="mensagem-status" role="status" aria-live="polite" class="feedback"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="titulo-lista" class="card">
+      <div class="cabecalho-lista">
+        <h2 id="titulo-lista">Itens Disponíveis na Comunidade</h2>
+        <div>
+          <label for="filtro-categoria" class="sr-only">Filtrar por categoria</label>
+          <select id="filtro-categoria" aria-label="Filtrar por categoria">
+            <option value="">Todas as categorias</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Móveis">Móveis</option>
+            <option value="Livros">Livros</option>
+            <option value="Eletrônicos">Eletrônicos</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+      </div>
+      <ul id="lista-itens" class="lista-itens" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
